@@ -27,5 +27,14 @@ terraform {
   }
 
   required_version = "> 0.14"
+
+  backend "s3" {
+    bucket = "ttt-state-bucket"
+    key    = "mykey/terraform_state.tfstate"
+    region = "ap-southeast-2"
+  }
 }
 
+provider "aws" {
+  region = "ap-southeast-2"
+}
