@@ -30,7 +30,7 @@ terraform {
 
   backend "s3" {
     bucket = "ttt-state-bucket"
-    key    = "mykey/terraform_state.tfstate"
+    key    = "eks/terraform_state.tfstate"
     region = "ap-southeast-2"
   }
 }
